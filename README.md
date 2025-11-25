@@ -101,7 +101,7 @@ END
 ### Java Code
 
 ```Java
-static void basicArithmetic() {
+public static void basicArithmetic() {
     System.out.println("45 + 11 = " + (45 + 11));
     System.out.println("12 * 4 = " + (12 * 4));
     System.out.println("24 / 6 = " + (24 / 6));
@@ -138,10 +138,43 @@ END
 ### Java Code
 
 ```java
-static void calculateAverage() {
+public static void calculateAverage() {
     int num1 = 10, num2 = 20, num3 = 30;
     int sum = num1 + num2 + num3;
     int average = sum / 3;
     System.out.println("(" + num1 + " + " + num2 + " + " + num3 + ") / 3 = " + average);
 }
 ```
+
+## Exercise 5 – Greet User
+
+### Question
+Create a program that asks the user to input their name and stores it in a variable. Then print Hello <username>.
+
+### Algorithm
+1. Ask the user to enter their name.
+2. Read the name into a variable.
+3. Print "Hello" followed by the name.
+   
+### Pseudocode
+
+```
+BEGIN
+    PROMPT "Enter your name: "
+    READ name
+    PRINT "Hello " + name
+END
+```
+
+### Java Code
+
+```java
+public static void greetUser() {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter your name: ");
+    String name = scanner.nextLine();
+    System.out.println("Hello " + name);
+}
+```
+
+Exercise 6 – Arithme
