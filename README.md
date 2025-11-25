@@ -108,3 +108,40 @@ static void basicArithmetic() {
     System.out.println("55 - 12 = " + (55 - 12));
 }
 ```
+
+## Exercise 4 – Average of Three Numbers
+
+### Question
+Write a Java program that prints the average of three numbers.
+
+### Algorithm
+1. Define three integer numbers: 10, 20, and 30.
+2. Calculate their sum.
+3. Divide the sum by 3 to get the average.
+4. Print the average.
+
+### Pseudocode
+
+```
+BEGIN
+    SET num1 = 23
+    SET num2 = 11
+    SET num3 = 77
+
+    SET sum = num1 + num2 + num3
+    SET average = sum / 3
+
+    PRINT "(num1 + num2 + num3) / 3 = " + average
+END
+```
+
+### Java Code
+
+```java
+static void calculateAverage() {
+    int num1 = 10, num2 = 20, num3 = 30;
+    int sum = num1 + num2 + num3;
+    int average = sum / 3;
+    System.out.println("(" + num1 + " + " + num2 + " + " + num3 + ") / 3 = " + average);
+}
+```
