@@ -1,6 +1,6 @@
 # Java Exercises
 
-## Exercise 1 - Print Hello andName
+## Exercise 1 - Print Hello and Name
 
 ### Question
 Write a Java program to print `Hello` on screen and then print your name on
@@ -28,7 +28,7 @@ public static void printHello() {
 
 ## Exercise 2
 
-### Question - Leap Year
+### Question - Print Leap Year
 
 Create a program that takes a year as input from user and print if it’s leap
 year or not.
@@ -58,7 +58,7 @@ END
 
 ### Java Code
 ``` java
-public static void checkLeapYear() {
+public static void printLeapYear() {
 Scanner scanner = new Scanner(System.in)
 System.out.print(`Enter a year: `)
 int year = scanner.nextInt();
@@ -138,7 +138,7 @@ END
 ### Java Code
 
 ```java
-public static void calculateAverage() {
+public static void printAverage() {
     int num1 = 10, num2 = 20, num3 = 30;
     int sum = num1 + num2 + num3;
     int average = sum / 3;
@@ -169,7 +169,7 @@ END
 ### Java Code
 
 ```java
-public static void greetUser() {
+public static void printUserName() {
     Scanner scanner = new Scanner(System.in);
     System.out.print("Enter your name: ");
     String name = scanner.nextLine();
@@ -177,4 +177,53 @@ public static void greetUser() {
 }
 ```
 
-Exercise 6 – Arithme
+## Exercise 6 – Print User Input
+
+### Question
+Create a program that asks the user to input two numbers and prints the sum, multiplication, division, and subtraction of the given numbers.
+
+### Algorithm
+1. Ask the user to input the first number.
+2. Ask the user to enter the operator .
+3. Ask the user to input the second number.
+4. Calculate and print sum, product, quotient, and difference.
+   
+### Pseudocode
+
+```
+BEGIN
+    PROMPT "Enter first number: "
+    READ a
+
+  PROMPT "Enter first operator: "
+    READ b
+
+    PROMPT "Enter second number: "
+    READ c
+
+    PRINT a + " + " + b + " + c + = " + (a + b)
+    PRINT a + " * " + b + " = " + (a * b)
+    PRINT a + " / " + b + " = " + (a / b)
+    PRINT a + " - " + b + " = " + (a - b)
+END
+```
+
+### Java Code
+
+```java
+
+public static void printUserInput() {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Enter first number: ");
+    int a = scanner.nextInt();
+
+    System.out.print("Enter second number: ");
+    int b = scanner.nextInt();
+
+    System.out.println(a + " + " + b + " + c + " = " + (a + b));
+    System.out.println(a + " + " + b + " + c + " = " + (a + b));
+    System.out.println(a + " + " + b + " + c + " = " + (a + b));
+    System.out.println(a + " + " + b + " + c + " = " + (a + b));
+}
+```
