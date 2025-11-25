@@ -70,3 +70,41 @@ System.out.printin(year + "is not a leap year"
   }
 }
 ```
+
+## Exercise 3 – Basic Arithmetic
+
+### Question - Basic Arithmetic
+Write a Java program to print the sum, multiplication, division, and subtraction of two numbers.
+
+### Algorithm
+1. Choose the numbers for each operation.
+2. Perform addition, multiplication, division, and subtraction.
+3. Print the expression and the result for each operation.
+   
+### Pseudocode
+```
+BEGIN
+    SET a1 = 45, b1 = 11
+    PRINT "45 + 11 = " + (a1 + b1)
+
+    SET a2 = 12, b2 = 4
+    PRINT "12 * 4 = " + (a2 * b2)
+
+    SET a3 = 24, b3 = 6
+    PRINT "24 / 6 = " + (a3 / b3)
+
+    SET a4 = 55, b4 = 12
+    PRINT "55 - 12 = " + (a4 - b4)
+END
+```
+
+### Java Code
+
+```Java
+static void basicArithmetic() {
+    System.out.println("45 + 11 = " + (45 + 11));
+    System.out.println("12 * 4 = " + (12 * 4));
+    System.out.println("24 / 6 = " + (24 / 6));
+    System.out.println("55 - 12 = " + (55 - 12));
+}
+```
