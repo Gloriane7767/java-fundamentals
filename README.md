@@ -227,3 +227,103 @@ public static void printUserInput() {
     System.out.println(a + " + " + b + " + c + " = " + (a + b));
 }
 ```
+
+## Exercise 7 – Convert Seconds
+
+### Question
+Create a program that converts seconds to hours, minutes, and seconds.
+
+### Algorithm
+1. Read total seconds.
+2. Calculate hours, minutes, and remaining seconds.
+3. Print formatted time (HH:MM:SS).
+   
+### Pseudocode
+
+```
+BEGIN
+    PROMPT "Input seconds: "
+    READ totalSeconds
+
+    hours = totalSeconds / 3600
+    remaining = totalSeconds MOD 3600
+    minutes = remaining / 60
+    seconds = remaining MOD 60
+
+    PRINT hours:minutes:seconds
+END
+```
+
+### Java Code
+
+```java
+static void convertSecondsToHMS() {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Input seconds: ");
+    int totalSeconds = scanner.nextInt();
+
+    int hours = totalSeconds / 3600;
+    int remaining = totalSeconds % 3600;
+    int minutes = remaining / 60;
+    int seconds = remaining % 60;
+
+    String formattedTime = String.format("%02d:%02d:%02d", hours, minutes, seconds);
+    System.out.println(formattedTime);
+}
+```
+
+## Exercise 8 – Guess the Number
+
+### Question
+Write a program that generates a random number between 1 and 500. The user must guess the number, and the program will provide feedback ("too small", "too big") until the correct number is guessed.
+
+### Algorithm
+Generate random number target.
+Loop:
+1. Ask for guess.
+2. If guess == target, print success and exit.
+3. If guess < target, print "Too small".
+4. If guess > target, print "Too big".
+
+
+### Pseudocode
+
+```
+BEGIN
+    GENERATE target in [1, 500]
+    REPEAT
+        READ guess
+        IF guess == target THEN EXIT
+        ELSE IF guess < target THEN PRINT "Too small"
+        ELSE PRINT "Too big"
+    UNTIL guess == target
+END
+```
+
+### Java Code
+
+```java
+static void guessTheNumber() {
+    Random random = new Random();
+    int targetNumber = random.nextInt(500) + 1;
+    Scanner scanner = new Scanner(System.in);
+
+    int attempts = 0;
+    System.out.println("Guess the number (between 1 and 500):");
+
+    while (true) {
+        System.out.print("Enter your guess: ");
+        int guess = scanner.nextInt();
+        attempts++;
+
+        if (guess == targetNumber) {
+            System.out.println("Congratulations! You guessed the correct number in " + attempts + " attempts.");
+            break;
+        } else if (guess < targetNumber) {
+            System.out.println("Your guess was too small.");
+        } else {
+            System.out.println("Your guess was too big.");
+        }
+    }
+}
+```
